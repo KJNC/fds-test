@@ -46,7 +46,15 @@
     min-height: 40px;
     display: block;
   }
-  
+  .select2-container--default .select2-selection--multiple .select2-selection__choice__remove:hover,.select2-container--default .select2-selection--multiple .select2-selection__choice__remove:focus {
+    background-color: black;
+    color:white;
+    outline: none
+}
+  .select2-container--default .select2-selection--multiple .select2-selection__choice__remove{
+    float: right;
+    border-right: 0;
+    }
   .select2-container .select2-selection--multiple {
     background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3C!DOCTYPE svg PUBLIC '-//W3C//DTD SVG 1.1//EN' 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'%3E%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath d='M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z' /%3E%3C/svg%3E");
     background-repeat: no-repeat;
@@ -123,11 +131,12 @@
     vertical-align: middle;
   }
   
-  .select2-container.select2-container--default .select2-results__option[role="option"]:not(.select2-results__option--load-more):not(.loading-results)[data-selected=true]::before {
+  .select2-container.select2-container--default .select2-results__option.select2-results__option--selected[role="option"]:not(.select2-results__option--load-more):not(.loading-results)::before {
     background-color: black;
   }
+
   
-  .select2-container.select2-container--default .select2-results__option[role="option"]:not(.select2-results__option--load-more):not(.loading-results)[data-selected=true]::after {
+  .select2-container.select2-container--default .select2-results__option.select2-results__option--selected[role="option"]:not(.select2-results__option--load-more):not(.loading-results)::after {
     content: "";
     height: 7px;
     width: 14px;
@@ -138,6 +147,8 @@
     -ms-transform: rotate(-45deg);
     transform: rotate(-45deg);
   }
+
+  select2-results__option select2-results__option--selectable select2-results__option--highlighted select2-results__option--selected
   
   .select2-container.select2-container--default .select2-results__option[role="option"]:not(.select2-results__option--load-more):not(.loading-results)[data-selected=true] {
     background-color: transparent;

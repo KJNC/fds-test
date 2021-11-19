@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function(){
 
     if(document.getElementById('input-lande') !== null){
       //Init a normal selectwoo
-      $('#input-lande').selectWoo({
+      $('#input-lande').select2({
         multiple: true,
         placeholder: "Vælg et eller flere ...",
         width: "style",
